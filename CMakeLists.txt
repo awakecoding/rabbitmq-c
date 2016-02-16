@@ -270,6 +270,7 @@ option(ENABLE_SSL_SUPPORT "Enable SSL support" ON)
 option(ENABLE_THREAD_SAFETY "Enable thread safety when using OpenSSL" ${Threads_FOUND})
 
 if (ENABLE_SSL_SUPPORT)
+  find_package(MbedTLS)
   find_package(OpenSSL 0.9.8 REQUIRED)
 endif()
 
